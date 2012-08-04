@@ -1,4 +1,5 @@
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 add_subdirectory(json)
 
-add_library(jsoncpp SHARED jsoncpp.cpp)
+SET( JSONCPP_INCLUDE ${CMAKE_CURRENT_SOURCE_DIR} CACHE STRING "jsoncpp include dir" FORCE)
+add_library(jsoncpp STATIC jsoncpp.cpp)
